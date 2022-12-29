@@ -27,15 +27,15 @@ jobs:
           fetch-depth: 0
 
       # download Lemontree.Automation on a runner and setup the license
-      - uses: LieberLieber/setup-LemonTree.Automation@v1
-        id: GetLTA
-        with:
-          License: ${{secrets.LTALICENSE}} 
+      #- uses: LieberLieber/setup-LemonTree.Automation@v1
+      #  id: GetLTA
+      #  with:
+      #    License: ${{secrets.LTALICENSE}} 
       #ExeLocation &"${{steps.GetLTA.outputs.LemonTreeAutomationExecutable}}"
                       
       - name: ConsistencyCheck
         run: |
-          &"${{steps.GetLTA.outputs.LemonTreeAutomationExecutable}}" ConsistencyCheck --Model ${{env.ModelName}}.${{env.ModelExtension}}
+          &"${{env.LemonTreeAutomationExecutable}}" ConsistencyCheck --Model ${{env.ModelName}}.${{env.ModelExtension}}
  
      
     
