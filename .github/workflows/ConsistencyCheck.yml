@@ -16,7 +16,6 @@ env:
 jobs:
   ConsistencyCheck:
     defaults:
-      run:
     runs-on: self-hosted
     timeout-minutes: 15
     steps:
