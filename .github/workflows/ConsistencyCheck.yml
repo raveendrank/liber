@@ -17,7 +17,7 @@ jobs:
   ConsistencyCheck:
     defaults:
       run:
-        shell: cmd
+        shell: pwsh
     runs-on: self-hosted
     timeout-minutes: 15
     steps:
